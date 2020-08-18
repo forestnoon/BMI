@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI culclate</title>
+</head>
+<body>
+    <h1>BMI</h1>
+    {% for message in form.weight.errors  %}
+    <div>{{ message }}</div>
+    {% endfor %}
+
+    <form method="post" action="/">
+        {{form.weight.label}}<br>
+        {{form.weight}}<br>
+
+        {{form.height.label}}<br>
+        {{form.height}}<br>
+
+        {{form.submit}}
+    </form>
+    <p>{{result_message}}</p>
+</body>
+</html>
